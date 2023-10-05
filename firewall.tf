@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "default" {
-    name = "test-firewall"
+    name = "test-firewall1"
     network = "default"
     allow {
       protocol = "icmp"
