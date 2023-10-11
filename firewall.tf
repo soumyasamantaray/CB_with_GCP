@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "default" {
     name = "test-firewall1"
-    network = "default"
+    network = google_compute_network.vpc_network.id
     allow {
       protocol = "icmp"
 
