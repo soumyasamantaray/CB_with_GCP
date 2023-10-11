@@ -3,7 +3,8 @@ resource "google_compute_instance" "webserver" {
     description = "this is 1st server"
     machine_type = "e2-medium"
     network_interface {
-      network = "default"
+      network = google_compute_network.vpc_network.id
+      subnetwork = google_compute_subnetwork.default.id
     }
     boot_disk {
       initialize_params {
